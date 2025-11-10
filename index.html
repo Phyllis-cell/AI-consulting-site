@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ZekaNor.AI — Applied AI Consulting</title>
-  <meta name="description" content="ZekaNor.AI helps organizations deliver measurable value with AI — from strategy to deployed copilots, data pipelines, and MLOps." />
+  <title>ZekaNor.AI — Applied AI, Data & Cloud Consulting</title>
+  <meta name="description" content="ZekaNor is a boutique consultancy delivering applied AI, data engineering, and analytics outcomes. From strategy to production in weeks, not months." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -15,162 +15,142 @@
         container: { center: true, padding: '1rem' },
         extend: {
           colors: {
-            primary: { DEFAULT: '#2563EB' },     // blue-600
-            accent: { DEFAULT: '#06B6D4' },      // cyan-500
-            surface: '#0B1120',
-            ink: '#E2E8F0'
+            primary: { DEFAULT: '#2563EB' }, /* Blue 600 */
+            accent: { DEFAULT: '#38BDF8' },  /* Sky 400 */
+            ink: '#E5E7EB',
+            surface: '#0A0E1A',
           },
-          boxShadow: { glow: '0 0 40px rgba(37, 99, 235, 0.45)' },
-          fontFamily: { sans: ['Inter', 'ui-sans-serif'] },
+          boxShadow: {
+            glow: '0 0 40px rgba(37, 99, 235, 0.45)',
+          },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
         }
       }
     }
   </script>
   <style>
-    .gradient { background: radial-gradient(circle at top left, rgba(37,99,235,.3), transparent),
-                             radial-gradient(circle at bottom right, rgba(6,182,212,.25), transparent); }
-    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); }
+    .stars { 
+      background-image: radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,.35), rgba(255,255,255,0)),
+                        radial-gradient(1px 1px at 100px 80px, rgba(255,255,255,.25), rgba(255,255,255,0)),
+                        radial-gradient(1.5px 1.5px at 200px 120px, rgba(255,255,255,.3), rgba(255,255,255,0));
+      background-size: 300px 300px, 500px 500px, 700px 700px;
+    }
+    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); }
+    .gradient { 
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(37,99,235,.35), rgba(37,99,235,0)),
+                  radial-gradient(900px 500px at 90% 10%, rgba(56,189,248,.25), rgba(56,189,248,0));
+    }
     html { scroll-behavior: smooth; }
   </style>
 </head>
+<body class="bg-surface text-ink font-sans selection:bg-primary/30">
 
-<body class="bg-surface text-ink font-sans">
-  <!-- Navbar -->
+  <!-- NAVBAR -->
   <header class="fixed inset-x-0 top-0 z-50">
-    <nav class="container mt-4 px-4 py-3 glass rounded-2xl flex items-center justify-between">
-      <a href="#home" class="text-white font-bold text-xl tracking-tight">ZekaNor.AI</a>
+    <nav class="container mt-4 px-4 py-3 rounded-2xl glass flex items-center justify-between">
+      <a href="#home" class="group flex items-center gap-2">
+        <div class="h-8 w-8 rounded-full bg-primary shadow-glow grid place-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="h-5 w-5"><path d="M12 3v18M3 12h18" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <span class="font-bold tracking-tight text-white">ZekaNor.AI</span>
+      </a>
       <ul class="hidden md:flex items-center gap-6 text-sm">
-        <li><a href="#services" class="hover:text-white">Services</a></li>
-        <li><a href="#work" class="hover:text-white">Work</a></li>
-        <li><a href="#pricing" class="hover:text-white">Pricing</a></li>
-        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+        <li><a class="hover:text-white" href="#services">Services</a></li>
+        <li><a class="hover:text-white" href="#industries">Industries</a></li>
+        <li><a class="hover:text-white" href="#work">Work</a></li>
+        <li><a class="hover:text-white" href="#contact">Contact</a></li>
+        <li><a class="ml-2 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white shadow-glow hover:opacity-90" href="#contact">Book a Call</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section id="home" class="pt-32 md:pt-40 pb-20 gradient">
+  <!-- HERO SECTION -->
+  <section id="home" class="pt-32 md:pt-40 pb-20 gradient stars">
     <div class="container grid lg:grid-cols-2 gap-10 items-center">
       <div>
-        <h1 class="text-5xl md:text-6xl font-black text-white leading-tight">
-          Building Trustworthy <br>AI Systems for the Real World.
+        <span class="inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1 text-xs text-white/70">
+          <span class="h-2 w-2 rounded-full bg-accent"></span> AI • Data • Cloud • Analytics
+        </span>
+        <h1 class="mt-5 text-4xl md:text-6xl font-black tracking-tight text-white leading-[1.05]">
+          Building Trustworthy AI Systems <br class="hidden md:block"/> that Deliver Results
         </h1>
-        <p class="mt-5 text-lg text-white/80 max-w-xl">
-          We help businesses adopt AI responsibly — from GenAI assistants to MLOps pipelines — delivering measurable ROI and human-centered solutions.
-        </p>
+        <p class="mt-5 text-white/70 text-lg max-w-xl">ZekaNor.AI helps businesses transform ideas into production-grade AI and data products with measurable ROI.</p>
         <div class="mt-7 flex flex-col sm:flex-row gap-4">
-          <a href="#contact" class="bg-primary hover:bg-primary/80 shadow-glow text-white font-semibold px-6 py-3 rounded-xl text-center">Start a Project</a>
-          <a href="#work" class="border border-white/20 px-6 py-3 rounded-xl text-white text-center hover:bg-white/10">See Case Studies</a>
+          <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3 font-semibold text-white shadow-glow hover:opacity-90">Start a Project</a>
+          <a href="#work" class="inline-flex items-center justify-center rounded-xl border border-white/15 px-6 py-3 font-semibold text-white/90 hover:bg-white/5">See Case Studies</a>
         </div>
       </div>
       <div class="relative">
-        <div class="absolute -inset-4 bg-blue-500/20 blur-2xl rounded-3xl"></div>
-        <div class="relative rounded-3xl overflow-hidden glass">
-          <img src="https://images.unsplash.com/photo-1581091012184-5c72b4e90b1d?q=80&w=1400&auto=format&fit=crop"
-               alt="Two AI consultants collaborating" class="w-full h-80 object-cover" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="py-16">
-    <div class="container">
-      <h2 class="text-4xl font-bold text-white mb-6">Our Services</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="glass rounded-2xl p-6">
-          <h3 class="text-xl font-semibold text-white">AI Strategy & Roadmaps</h3>
-          <p class="mt-2 text-white/70">Identify high-impact use cases, model options, and governance plans tailored to your business goals.</p>
-        </div>
-        <div class="glass rounded-2xl p-6">
-          <h3 class="text-xl font-semibold text-white">Generative AI Copilots</h3>
-          <p class="mt-2 text-white/70">Design multilingual assistants and fraud or customer-service copilots powered by AWS Bedrock & OpenAI.</p>
-        </div>
-        <div class="glass rounded-2xl p-6">
-          <h3 class="text-xl font-semibold text-white">MLOps & Data Pipelines</h3>
-          <p class="mt-2 text-white/70">Build secure, observable, and scalable pipelines that keep your models reliable and compliant.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Work -->
-  <section id="work" class="py-16">
-    <div class="container grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h2 class="text-4xl font-bold text-white">Featured Project: Fraud Copilot AI</h2>
-        <p class="mt-3 text-white/70">
-          An explainable fraud-detection console built on AWS Bedrock and DynamoDB — enabling analysts to detect anomalies in real time across multilingual data.
-        </p>
-        <ul class="mt-5 text-white/70 space-y-2 list-disc list-inside">
-          <li>92 % precision on simulated fraud patterns</li>
-          <li>Voice & multilingual reasoning interface</li>
-          <li>Outcome: 38 % reduction in manual review time</li>
-        </ul>
-      </div>
-      <div class="relative">
-        <div class="absolute -inset-4 bg-accent/20 blur-2xl rounded-3xl"></div>
+        <div class="absolute -inset-4 rounded-3xl bg-primary/20 blur-2xl"></div>
         <div class="relative glass rounded-3xl overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?q=80&w=1400&auto=format&fit=crop"
-               alt="Analyst dashboard preview" class="w-full h-72 object-cover" />
+          <img src="https://images.unsplash.com/photo-1616401784845-71a5a36cb2f7?q=80&w=1200&auto=format&fit=crop" 
+               alt="Man and woman collaborating in AI consulting" class="w-full h-96 object-cover"/>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Pricing -->
-  <section id="pricing" class="py-16">
+  <!-- CASE STUDY -->
+  <section id="work" class="py-16">
     <div class="container">
-      <h2 class="text-4xl font-bold text-white mb-6">Engagement Models</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="glass rounded-2xl p-6">
-          <h3 class="text-xl font-semibold text-white">Strategy Sprint</h3>
-          <p class="text-white/70 mt-2">2 weeks • fixed price</p>
-          <ul class="list-disc list-inside text-white/70 mt-3 space-y-1">
-            <li>Use-case ROI mapping</li><li>Data & risk assessment</li><li>90-day AI roadmap</li>
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white">Featured Project — Fraud Copilot AI</h2>
+          <p class="mt-3 text-white/70">A real-time fraud detection and investigation tool built with AWS Bedrock, DynamoDB, and Streamlit. Reduced manual review time by 38%.</p>
+          <ul class="mt-5 text-white/70 list-disc list-inside space-y-2">
+            <li>Multilingual reasoning engine</li>
+            <li>Audit trail & explanation system</li>
+            <li>Polly voice summaries for analysts</li>
           </ul>
         </div>
-        <div class="glass rounded-2xl p-6 border border-primary/40 relative">
-          <span class="absolute -top-3 left-6 text-xs bg-primary text-white rounded-full px-3 py-1">Most Popular</span>
-          <h3 class="text-xl font-semibold text-white">Prototype → Pilot</h3>
-          <p class="text-white/70 mt-2">4–8 weeks • outcome-based</p>
-          <ul class="list-disc list-inside text-white/70 mt-3 space-y-1">
-            <li>Functional GenAI prototype</li><li>Evaluation & guardrails</li><li>Handover & training</li>
-          </ul>
-        </div>
-        <div class="glass rounded-2xl p-6">
-          <h3 class="text-xl font-semibold text-white">MLOps Retainer</h3>
-          <p class="text-white/70 mt-2">Monthly • flexible</p>
-          <ul class="list-disc list-inside text-white/70 mt-3 space-y-1">
-            <li>Model monitoring & updates</li><li>Telemetry dashboards</li><li>Cost optimization</li>
-          </ul>
+        <div class="relative">
+          <div class="absolute -inset-4 bg-accent/20 blur-2xl rounded-3xl"></div>
+          <div class="relative glass rounded-3xl overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1629904853893-c2c8981a1f3b?q=80&w=1200&auto=format&fit=crop" 
+                 alt="Man and woman analyzing fraud data dashboard" class="w-full h-72 object-cover"/>
+            <div class="p-5"><p class="text-sm text-white/70">Tech: AWS Bedrock • Streamlit • DynamoDB • Lambda</p></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- CONTACT -->
   <section id="contact" class="py-20">
     <div class="container grid md:grid-cols-2 gap-8 items-center">
       <div>
-        <h2 class="text-4xl font-bold text-white">Let’s Build Together</h2>
-        <p class="mt-3 text-white/70">Reach out for collaboration, consulting, or partnerships. We’ll respond within 24 hours.</p>
-        <p class="mt-5 text-white/60">📧 hello@zekanor.ai   🌍 New York • Remote First</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white">Let’s Build Something Impactful</h2>
+        <p class="mt-3 text-white/70">Tell us about your project. We'll reply within 24 hours with next steps.</p>
+        <ul class="mt-6 space-y-2 text-white/70">
+          <li>• hello@zekanor.ai</li>
+          <li>• New York • Remote-first</li>
+        </ul>
       </div>
       <form class="glass rounded-2xl p-6 space-y-4" action="https://formspree.io/f/your-id" method="POST">
-        <input name="name" placeholder="Your name" class="w-full bg-white/5 text-white px-4 py-3 rounded-lg border border-white/10 focus:ring-2 focus:ring-primary" required>
-        <input type="email" name="email" placeholder="you@company.com" class="w-full bg-white/5 text-white px-4 py-3 rounded-lg border border-white/10 focus:ring-2 focus:ring-primary" required>
-        <textarea name="message" rows="4" placeholder="Tell us briefly about your project" class="w-full bg-white/5 text-white px-4 py-3 rounded-lg border border-white/10 focus:ring-2 focus:ring-primary" required></textarea>
-        <button class="w-full bg-primary hover:bg-primary/80 text-white font-semibold px-5 py-3 rounded-xl shadow-glow">Send Message</button>
+        <div>
+          <label class="text-sm text-white/70">Name</label>
+          <input name="name" required class="mt-1 w-full rounded-lg bg-white/5 px-4 py-3 text-white placeholder-white/40 border border-white/10 focus:ring-2 focus:ring-primary" placeholder="Your full name" />
+        </div>
+        <div>
+          <label class="text-sm text-white/70">Email</label>
+          <input name="email" required type="email" class="mt-1 w-full rounded-lg bg-white/5 px-4 py-3 text-white placeholder-white/40 border border-white/10 focus:ring-2 focus:ring-primary" placeholder="you@company.com" />
+        </div>
+        <div>
+          <label class="text-sm text-white/70">Message</label>
+          <textarea name="message" rows="4" required class="mt-1 w-full rounded-lg bg-white/5 px-4 py-3 text-white placeholder-white/40 border border-white/10 focus:ring-2 focus:ring-primary" placeholder="Describe your goals or project..."></textarea>
+        </div>
+        <button class="w-full rounded-xl bg-primary px-5 py-3 font-semibold text-white shadow-glow hover:opacity-90">Send</button>
+        <p class="text-xs text-white/50">By submitting, you agree to our privacy policy. No spam—ever.</p>
       </form>
     </div>
   </section>
 
-  <footer class="py-8 border-t border-white/10 text-center text-white/60 text-sm">
-    © <span id="year"></span> ZekaNor.AI — Applied AI Consulting
+  <footer class="py-10 border-t border-white/5 text-center text-white/60 text-sm">
+    <p>© <span id="y"></span> ZekaNor.AI — All rights reserved.</p>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
 
