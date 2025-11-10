@@ -3,345 +3,174 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ZekaNor.AI — Consulting for Applied AI</title>
-  <meta name="description" content="AI consulting for strategy, prototypes, MLOps and GenAI assistants. Ship real value in weeks, not months." />
+  <title>ZekaNor.AI — Applied AI Consulting</title>
+  <meta name="description" content="ZekaNor.AI helps organizations deliver measurable value with AI — from strategy to deployed copilots, data pipelines, and MLOps." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <!-- Tailwind via CDN -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // Tailwind config (only colors & container)
     tailwind.config = {
       theme: {
         container: { center: true, padding: '1rem' },
         extend: {
           colors: {
-            primary: { DEFAULT: '#7C3AED' },             // violet 600
-            accent: { DEFAULT: '#22D3EE' },               // cyan 400
-            ink: '#E5E7EB',                               // gray-200 for text on dark
-            surface: '#0B0B12',
+            primary: { DEFAULT: '#2563EB' },     // blue-600
+            accent: { DEFAULT: '#06B6D4' },      // cyan-500
+            surface: '#0B1120',
+            ink: '#E2E8F0'
           },
-          boxShadow: {
-            glow: '0 0 40px rgba(124, 58, 237, 0.45)',
-          },
-          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          boxShadow: { glow: '0 0 40px rgba(37, 99, 235, 0.45)' },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif'] },
         }
       }
     }
   </script>
   <style>
-    /* Subtle starfield background */
-    .stars { background-image: radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,.35), rgba(255,255,255,0)),
-                               radial-gradient(1px 1px at 100px 80px, rgba(255,255,255,.25), rgba(255,255,255,0)),
-                               radial-gradient(1.5px 1.5px at 200px 120px, rgba(255,255,255,.3), rgba(255,255,255,0));
-              background-size: 300px 300px, 500px 500px, 700px 700px; }
+    .gradient { background: radial-gradient(circle at top left, rgba(37,99,235,.3), transparent),
+                             radial-gradient(circle at bottom right, rgba(6,182,212,.25), transparent); }
     .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); }
-    .gradient { background: radial-gradient(1200px 600px at 10% -10%, rgba(124,58,237,.35), rgba(124,58,237,0)),
-                              radial-gradient(900px 500px at 90% 10%, rgba(34,211,238,.25), rgba(34,211,238,0)); }
     html { scroll-behavior: smooth; }
   </style>
 </head>
-<body class="bg-surface text-ink font-sans selection:bg-primary/30">
-  <!-- NAVBAR -->
+
+<body class="bg-surface text-ink font-sans">
+  <!-- Navbar -->
   <header class="fixed inset-x-0 top-0 z-50">
-    <nav class="container mt-4 px-4 py-3 rounded-2xl glass flex items-center justify-between">
-      <a href="#home" class="group flex items-center gap-2">
-        <div class="h-8 w-8 rounded-full bg-primary/90 shadow-glow grid place-items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="h-5 w-5">
-            <path d="M12 3v18M3 12h18" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <span class="font-bold tracking-tight text-white">ZekaNor.AI</span>
-      </a>
-      <button id="menuBtn" class="md:hidden text-white/80" aria-label="Open Menu">
-        <!-- hamburger -->
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-      <ul id="menu" class="hidden md:flex items-center gap-6 text-sm">
-        <li><a class="hover:text-white/95" href="#services">Services</a></li>
-        <li><a class="hover:text-white/95" href="#work">Work</a></li>
-        <li><a class="hover:text-white/95" href="#pricing">Pricing</a></li>
-        <li><a class="hover:text-white/95" href="#faq">FAQ</a></li>
-        <li><a class="hover:text-white/95" href="#contact">Contact</a></li>
-        <li><a class="ml-2 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white shadow-glow hover:opacity-90" href="#contact">Book a call</a></li>
+    <nav class="container mt-4 px-4 py-3 glass rounded-2xl flex items-center justify-between">
+      <a href="#home" class="text-white font-bold text-xl tracking-tight">ZekaNor.AI</a>
+      <ul class="hidden md:flex items-center gap-6 text-sm">
+        <li><a href="#services" class="hover:text-white">Services</a></li>
+        <li><a href="#work" class="hover:text-white">Work</a></li>
+        <li><a href="#pricing" class="hover:text-white">Pricing</a></li>
+        <li><a href="#contact" class="hover:text-white">Contact</a></li>
       </ul>
     </nav>
-    <div id="mobileMenu" class="hidden md:hidden container px-4">
-      <div class="mt-2 glass rounded-2xl p-4">
-        <a class="block py-2" href="#services">Services</a>
-        <a class="block py-2" href="#work">Work</a>
-        <a class="block py-2" href="#pricing">Pricing</a>
-        <a class="block py-2" href="#faq">FAQ</a>
-        <a class="block py-2" href="#contact">Contact</a>
-      </div>
-    </div>
   </header>
 
-  <!-- HERO -->
-  <section id="home" class="pt-32 md:pt-40 pb-20 gradient stars">
+  <!-- Hero -->
+  <section id="home" class="pt-32 md:pt-40 pb-20 gradient">
     <div class="container grid lg:grid-cols-2 gap-10 items-center">
       <div>
-        <span class="inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1 text-xs text-white/70">
-          <span class="h-2 w-2 rounded-full bg-accent"></span> AI consulting • GenAI • MLOps
-        </span>
-        <h1 class="mt-5 text-4xl md:text-6xl font-black tracking-tight text-white leading-[1.05]">
-          AI with care. <br class="hidden md:block"/> For your business.
+        <h1 class="text-5xl md:text-6xl font-black text-white leading-tight">
+          Building Trustworthy <br>AI Systems for the Real World.
         </h1>
-        <p class="mt-5 text-white/70 text-lg max-w-xl">Strategy, prototypes and production AI that ship in weeks—not months. We help teams turn messy data and ambitious ideas into reliable, secure systems.</p>
+        <p class="mt-5 text-lg text-white/80 max-w-xl">
+          We help businesses adopt AI responsibly — from GenAI assistants to MLOps pipelines — delivering measurable ROI and human-centered solutions.
+        </p>
         <div class="mt-7 flex flex-col sm:flex-row gap-4">
-          <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3 font-semibold text-white shadow-glow hover:opacity-90">Start a project</a>
-          <a href="#work" class="inline-flex items-center justify-center rounded-xl border border-white/15 px-6 py-3 font-semibold text-white/90 hover:bg-white/5">See case studies</a>
-        </div>
-        <div class="mt-8 flex items-center gap-6 text-white/60 text-sm">
-          <div class="flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round"/></svg> SOC2‑aware</div>
-          <div class="flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg> Measurable ROI</div>
-          <div class="flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 12h18"/></svg> Bedrock/Vertex/OpenAI</div>
+          <a href="#contact" class="bg-primary hover:bg-primary/80 shadow-glow text-white font-semibold px-6 py-3 rounded-xl text-center">Start a Project</a>
+          <a href="#work" class="border border-white/20 px-6 py-3 rounded-xl text-white text-center hover:bg-white/10">See Case Studies</a>
         </div>
       </div>
       <div class="relative">
-        <div class="absolute -inset-4 rounded-3xl bg-primary/20 blur-2xl"></div>
-        <div class="relative glass rounded-3xl p-6">
-          <div class="grid grid-cols-2 gap-4">
-            <div class="rounded-2xl bg-white/5 p-4">
-              <p class="text-sm text-white/70">GenAI Assistants</p>
-              <p class="mt-2 text-2xl font-bold text-white">Customer & Analyst Copilots</p>
-            </div>
-            <div class="rounded-2xl bg-white/5 p-4">
-              <p class="text-sm text-white/70">MLOps</p>
-              <p class="mt-2 text-2xl font-bold text-white">Deploy & observe</p>
-            </div>
-            <div class="rounded-2xl bg-white/5 p-4">
-              <p class="text-sm text-white/70">Data</p>
-              <p class="mt-2 text-2xl font-bold text-white">Pipelines that last</p>
-            </div>
-            <div class="rounded-2xl bg-white/5 p-4">
-              <p class="text-sm text-white/70">Security</p>
-              <p class="mt-2 text-2xl font-bold text-white">Guardrails & privacy</p>
-            </div>
-          </div>
+        <div class="absolute -inset-4 bg-blue-500/20 blur-2xl rounded-3xl"></div>
+        <div class="relative rounded-3xl overflow-hidden glass">
+          <img src="https://images.unsplash.com/photo-1581091012184-5c72b4e90b1d?q=80&w=1400&auto=format&fit=crop"
+               alt="Two AI consultants collaborating" class="w-full h-80 object-cover" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TRUST BAR -->
-  <section class="pb-12">
-    <div class="container">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="glass rounded-xl p-4 text-center"><p class="text-2xl font-bold text-white">25%+</p><p class="text-sm text-white/70">Cost reduction</p></div>
-        <div class="glass rounded-xl p-4 text-center"><p class="text-2xl font-bold text-white">6–8 wks</p><p class="text-sm text-white/70">To first value</p></div>
-        <div class="glass rounded-xl p-4 text-center"><p class="text-2xl font-bold text-white">10x</p><p class="text-sm text-white/70">Faster iteration</p></div>
-        <div class="glass rounded-xl p-4 text-center"><p class="text-2xl font-bold text-white">24/7</p><p class="text-sm text-white/70">Support SLAs</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
+  <!-- Services -->
   <section id="services" class="py-16">
     <div class="container">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-white">What we do</h2>
-      <p class="mt-2 text-white/70 max-w-2xl">From first strategy workshop to production roll‑out. Transparent scopes. Fixed or agile pricing.</p>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <!-- Card 1 -->
+      <h2 class="text-4xl font-bold text-white mb-6">Our Services</h2>
+      <div class="grid md:grid-cols-3 gap-6">
         <div class="glass rounded-2xl p-6">
-          <div class="h-10 w-10 rounded-lg bg-primary/30 grid place-items-center mb-4">
-            <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6v12m6-6H6" stroke-linecap="round"/></svg>
-          </div>
-          <h3 class="text-xl font-bold text-white">AI Strategy Sprint</h3>
-          <p class="mt-2 text-white/70">Map use‑cases to value, pick models and data sources, and produce a 90‑day delivery plan.</p>
-          <ul class="mt-4 text-white/70 text-sm space-y-1 list-disc list-inside">
-            <li>Stakeholder/ROI workshop</li>
-            <li>Risk & governance plan</li>
-            <li>Roadmap & architecture</li>
-          </ul>
+          <h3 class="text-xl font-semibold text-white">AI Strategy & Roadmaps</h3>
+          <p class="mt-2 text-white/70">Identify high-impact use cases, model options, and governance plans tailored to your business goals.</p>
         </div>
-        <!-- Card 2 -->
         <div class="glass rounded-2xl p-6">
-          <div class="h-10 w-10 rounded-lg bg-primary/30 grid place-items-center mb-4">
-            <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18M3 12h18M3 17h18" /></svg>
-          </div>
-          <h3 class="text-xl font-bold text-white">GenAI Prototypes</h3>
-          <p class="mt-2 text-white/70">Copilots, RAG, and automation agents with OpenAI, Bedrock or Vertex—usable by week 2.</p>
-          <ul class="mt-4 text-white/70 text-sm space-y-1 list-disc list-inside">
-            <li>Secure retrieval (RAG)</li>
-            <li>Evaluation harnesses</li>
-            <li>Human‑in‑the‑loop flows</li>
-          </ul>
+          <h3 class="text-xl font-semibold text-white">Generative AI Copilots</h3>
+          <p class="mt-2 text-white/70">Design multilingual assistants and fraud or customer-service copilots powered by AWS Bedrock & OpenAI.</p>
         </div>
-        <!-- Card 3 -->
         <div class="glass rounded-2xl p-6">
-          <div class="h-10 w-10 rounded-lg bg-primary/30 grid place-items-center mb-4">
-            <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5v14"/></svg>
-          </div>
-          <h3 class="text-xl font-bold text-white">MLOps & Data</h3>
-          <p class="mt-2 text-white/70">Production pipelines, observability and governance so your models keep working.</p>
-          <ul class="mt-4 text-white/70 text-sm space-y-1 list-disc list-inside">
-            <li>CI/CD for models & prompts</li>
-            <li>Telemetry & guardrails</li>
-            <li>Cost/perf optimization</li>
-          </ul>
+          <h3 class="text-xl font-semibold text-white">MLOps & Data Pipelines</h3>
+          <p class="mt-2 text-white/70">Build secure, observable, and scalable pipelines that keep your models reliable and compliant.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CASE STUDY / WORK -->
+  <!-- Work -->
   <section id="work" class="py-16">
-    <div class="container">
-      <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <h2 class="text-3xl md:text-4xl font-extrabold text-white">Recent work</h2>
-          <p class="mt-3 text-white/70">FraudCopilot — a real‑time analyst console using AWS Bedrock + DynamoDB. Result: 38% manual review reduction and faster investigations.</p>
-          <ul class="mt-5 text-white/70 space-y-2 list-disc list-inside">
-            <li>RAG over policy & KYC docs</li>
-            <li>Reasoning + rationale audit trail</li>
-            <li>Row‑level security & PII masking</li>
-          </ul>
-          <a href="#contact" class="mt-6 inline-flex items-center gap-2 rounded-xl bg-white/10 px-5 py-3 text-white hover:bg-white/15">Request full case study →</a>
-        </div>
-        <div class="relative">
-          <div class="absolute -inset-4 bg-accent/20 blur-2xl rounded-3xl"></div>
-          <div class="relative glass rounded-3xl overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1400&auto=format&fit=crop" alt="Dashboard preview" class="w-full h-72 object-cover"/>
-            <div class="p-5">
-              <p class="text-sm text-white/70">Tech: Streamlit • AWS Bedrock • DynamoDB • Lambda • CloudWatch</p>
-            </div>
-          </div>
+    <div class="container grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-4xl font-bold text-white">Featured Project: Fraud Copilot AI</h2>
+        <p class="mt-3 text-white/70">
+          An explainable fraud-detection console built on AWS Bedrock and DynamoDB — enabling analysts to detect anomalies in real time across multilingual data.
+        </p>
+        <ul class="mt-5 text-white/70 space-y-2 list-disc list-inside">
+          <li>92 % precision on simulated fraud patterns</li>
+          <li>Voice & multilingual reasoning interface</li>
+          <li>Outcome: 38 % reduction in manual review time</li>
+        </ul>
+      </div>
+      <div class="relative">
+        <div class="absolute -inset-4 bg-accent/20 blur-2xl rounded-3xl"></div>
+        <div class="relative glass rounded-3xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?q=80&w=1400&auto=format&fit=crop"
+               alt="Analyst dashboard preview" class="w-full h-72 object-cover" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PRICING -->
+  <!-- Pricing -->
   <section id="pricing" class="py-16">
     <div class="container">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-white">Engagements</h2>
-      <p class="mt-2 text-white/70 max-w-2xl">Simple packages that de‑risk AI delivery. Ask for custom SOWs and enterprise terms.</p>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <div class="glass rounded-2xl p-6 flex flex-col">
-          <h3 class="text-xl font-bold text-white">Strategy Sprint</h3>
-          <p class="mt-2 text-white/70">2 weeks • fixed price</p>
-          <ul class="mt-4 text-white/70 text-sm space-y-2 list-disc list-inside flex-1">
-            <li>Use‑case & ROI mapping</li>
-            <li>Security & compliance plan</li>
-            <li>90‑day roadmap deliverable</li>
+      <h2 class="text-4xl font-bold text-white mb-6">Engagement Models</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass rounded-2xl p-6">
+          <h3 class="text-xl font-semibold text-white">Strategy Sprint</h3>
+          <p class="text-white/70 mt-2">2 weeks • fixed price</p>
+          <ul class="list-disc list-inside text-white/70 mt-3 space-y-1">
+            <li>Use-case ROI mapping</li><li>Data & risk assessment</li><li>90-day AI roadmap</li>
           </ul>
-          <a href="#contact" class="mt-6 inline-flex justify-center rounded-xl bg-primary px-5 py-3 font-semibold text-white shadow-glow">Get proposal</a>
         </div>
         <div class="glass rounded-2xl p-6 border border-primary/40 relative">
-          <span class="absolute -top-3 left-6 text-xs bg-primary text-white rounded-full px-3 py-1">Most popular</span>
-          <h3 class="text-xl font-bold text-white">Prototype to Pilot</h3>
-          <p class="mt-2 text-white/70">4–8 weeks • outcome‑based</p>
-          <ul class="mt-4 text-white/70 text-sm space-y-2 list-disc list-inside">
-            <li>Working app by week 2</li>
-            <li>Evaluation & guardrails</li>
-            <li>Handover & training</li>
+          <span class="absolute -top-3 left-6 text-xs bg-primary text-white rounded-full px-3 py-1">Most Popular</span>
+          <h3 class="text-xl font-semibold text-white">Prototype → Pilot</h3>
+          <p class="text-white/70 mt-2">4–8 weeks • outcome-based</p>
+          <ul class="list-disc list-inside text-white/70 mt-3 space-y-1">
+            <li>Functional GenAI prototype</li><li>Evaluation & guardrails</li><li>Handover & training</li>
           </ul>
-          <a href="#contact" class="mt-6 inline-flex justify-center rounded-xl bg-primary px-5 py-3 font-semibold text-white shadow-glow">Start scoping</a>
         </div>
         <div class="glass rounded-2xl p-6">
-          <h3 class="text-xl font-bold text-white">MLOps Retainer</h3>
-          <p class="mt-2 text-white/70">Monthly • flexible</p>
-          <ul class="mt-4 text-white/70 text-sm space-y-2 list-disc list-inside">
-            <li>Uptime & cost dashboards</li>
-            <li>Prompt/model updates</li>
-            <li>Support SLAs</li>
+          <h3 class="text-xl font-semibold text-white">MLOps Retainer</h3>
+          <p class="text-white/70 mt-2">Monthly • flexible</p>
+          <ul class="list-disc list-inside text-white/70 mt-3 space-y-1">
+            <li>Model monitoring & updates</li><li>Telemetry dashboards</li><li>Cost optimization</li>
           </ul>
-          <a href="#contact" class="mt-6 inline-flex justify-center rounded-xl bg-primary px-5 py-3 font-semibold text-white shadow-glow">Check availability</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="py-16">
-    <div class="container">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-white">FAQ</h2>
-      <div class="mt-6 grid md:grid-cols-2 gap-6">
-        <details class="glass rounded-xl p-5" open>
-          <summary class="cursor-pointer font-semibold text-white">Which models & clouds do you support?</summary>
-          <p class="mt-3 text-white/70">OpenAI, Anthropic and open‑weight models; AWS Bedrock, Azure, GCP and on‑prem. We pick what fits your risk, data and budget.</p>
-        </details>
-        <details class="glass rounded-xl p-5">
-          <summary class="cursor-pointer font-semibold text-white">How do you measure ROI?</summary>
-          <p class="mt-3 text-white/70">We define a north‑star metric in week 1 (e.g., review time saved, CSAT, conversion lift) and track it with an evaluation harness plus business KPIs.</p>
-        </details>
-        <details class="glass rounded-xl p-5">
-          <summary class="cursor-pointer font-semibold text-white">Data privacy & compliance?</summary>
-          <p class="mt-3 text-white/70">PII is masked or isolated; we support HIPAA/PCI workflows and can run within your VPC. Source code & weights remain your IP.</p>
-        </details>
-        <details class="glass rounded-xl p-5">
-          <summary class="cursor-pointer font-semibold text-white">Can you train our team?</summary>
-          <p class="mt-3 text-white/70">Yes—playbooks, enablement sessions and hands‑on pairing are included with every engagement.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
+  <!-- Contact -->
   <section id="contact" class="py-20">
-    <div class="container">
-      <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <h2 class="text-3xl md:text-4xl font-extrabold text-white">Let’s build something useful</h2>
-          <p class="mt-3 text-white/70">Tell us about your use‑case. We’ll reply within 24 hours with next steps and a suggested scope.</p>
-          <ul class="mt-6 space-y-2 text-white/70">
-            <li>• hello@zekanor.ai</li>
-            <li>• New York • Remote‑first</li>
-          </ul>
-        </div>
-        <form class="glass rounded-2xl p-6 space-y-4" action="https://formspree.io/f/your-id" method="POST">
-          <div>
-            <label class="text-sm text-white/70">Name</label>
-            <input name="name" required class="mt-1 w-full rounded-lg bg-white/5 px-4 py-3 text-white placeholder-white/40 border border-white/10 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your full name" />
-          </div>
-          <div class="grid md:grid-cols-2 gap-4">
-            <div>
-              <label class="text-sm text-white/70">Email</label>
-              <input name="email" required type="email" class="mt-1 w-full rounded-lg bg-white/5 px-4 py-3 text-white placeholder-white/40 border border-white/10 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="you@company.com" />
-            </div>
-            <div>
-              <label class="text-sm text-white/70">Company</label>
-              <input name="company" class="mt-1 w-full rounded-lg bg-white/5 px-4 py-3 text-white placeholder-white/40 border border-white/10 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Org name" />
-            </div>
-          </div>
-          <div>
-            <label class="text-sm text-white/70">How can we help?</label>
-            <textarea name="message" rows="4" required class="mt-1 w-full rounded-lg bg-white/5 px-4 py-3 text-white placeholder-white/40 border border-white/10 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Briefly describe your goals"></textarea>
-          </div>
-          <button class="w-full rounded-xl bg-primary px-5 py-3 font-semibold text-white shadow-glow hover:opacity-90">Send</button>
-          <p class="text-xs text-white/50">By submitting, you agree to our privacy policy. No spam—ever.</p>
-        </form>
+    <div class="container grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-4xl font-bold text-white">Let’s Build Together</h2>
+        <p class="mt-3 text-white/70">Reach out for collaboration, consulting, or partnerships. We’ll respond within 24 hours.</p>
+        <p class="mt-5 text-white/60">📧 hello@zekanor.ai   🌍 New York • Remote First</p>
       </div>
+      <form class="glass rounded-2xl p-6 space-y-4" action="https://formspree.io/f/your-id" method="POST">
+        <input name="name" placeholder="Your name" class="w-full bg-white/5 text-white px-4 py-3 rounded-lg border border-white/10 focus:ring-2 focus:ring-primary" required>
+        <input type="email" name="email" placeholder="you@company.com" class="w-full bg-white/5 text-white px-4 py-3 rounded-lg border border-white/10 focus:ring-2 focus:ring-primary" required>
+        <textarea name="message" rows="4" placeholder="Tell us briefly about your project" class="w-full bg-white/5 text-white px-4 py-3 rounded-lg border border-white/10 focus:ring-2 focus:ring-primary" required></textarea>
+        <button class="w-full bg-primary hover:bg-primary/80 text-white font-semibold px-5 py-3 rounded-xl shadow-glow">Send Message</button>
+      </form>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="py-10 border-t border-white/5">
-    <div class="container flex flex-col md:flex-row gap-4 items-center justify-between text-white/60 text-sm">
-      <p>© <span id="y"></span> ZekaNor.AI — All rights reserved.</p>
-      <div class="flex items-center gap-4">
-        <a href="#home" class="hover:text-white">Home</a>
-        <a href="#services" class="hover:text-white">Services</a>
-        <a href="#work" class="hover:text-white">Work</a>
-        <a href="#contact" class="hover:text-white">Contact</a>
-      </div>
-    </div>
+  <footer class="py-8 border-t border-white/10 text-center text-white/60 text-sm">
+    © <span id="year"></span> ZekaNor.AI — Applied AI Consulting
   </footer>
 
-  <script>
-    // Mobile nav toggle
-    const btn = document.getElementById('menuBtn');
-    const mm = document.getElementById('mobileMenu');
-    const menu = document.getElementById('menu');
-    if (btn) btn.addEventListener('click', () => mm.classList.toggle('hidden'));
-    // Close mobile on link click
-    mm?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mm.classList.add('hidden')));
-    // Year
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
