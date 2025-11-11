@@ -269,12 +269,60 @@
           </div>
         </div>
         <div class="relative">
-          <div class="absolute -inset-4 bg-accent/20 blur-2xl rounded-3xl" aria-hidden="true"></div>
-          <div class="relative glass rounded-3xl overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1629904853893-c2c8981a1f3b?auto=format&fit=crop&w=1200&q=80" alt="Man and woman analyzing fraud data dashboard" class="w-full h-72 object-cover" referrerpolicy="no-referrer" crossorigin="anonymous" loading="lazy" onerror="this.onerror=null;this.src='https://picsum.photos/1200/500?random=2';"/>
-            <div class="p-5"><p class="text-sm text-white/70">Tech: AWS Bedrock • Streamlit • DynamoDB • Lambda</p></div>
-          </div>
-        </div>
+  <div class="absolute -inset-4 bg-accent/20 blur-2xl rounded-3xl" aria-hidden="true"></div>
+  <div class="relative glass rounded-3xl overflow-hidden">
+    <!-- AI/Fraud Analytics Illustration as inline SVG -->
+    <svg viewBox="0 0 1200 480" class="w-full h-72" role="img" aria-label="Fraud analytics dashboard with anomaly network and shield">
+      <defs>
+        <linearGradient id="cs1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#38BDF8"/>
+          <stop offset="100%" stop-color="#2563EB"/>
+        </linearGradient>
+      </defs>
+      <rect width="1200" height="480" fill="url(#cs1)"/>
+      <!-- dashboard frame -->
+      <g transform="translate(40,40)">
+        <rect width="720" height="360" rx="18" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.25)"/>
+        <!-- header bars -->
+        <rect x="24" y="24" width="280" height="12" rx="6" fill="white" fill-opacity="0.7"/>
+        <rect x="24" y="48" width="200" height="10" rx="5" fill="white" fill-opacity="0.45"/>
+        <!-- chart area -->
+        <polyline points="24,300 120,260 210,280 300,220 390,240 480,190 570,210 660,180 708,195" fill="none" stroke="white" stroke-width="3" stroke-opacity="0.9"/>
+        <g fill="white" fill-opacity="0.9">
+          <circle cx="120" cy="260" r="5"/><circle cx="300" cy="220" r="5"/><circle cx="480" cy="190" r="5"/><circle cx="660" cy="180" r="5"/>
+        </g>
+        <!-- side metrics -->
+        <g transform="translate(760,0)">
+          <rect width="300" height="360" rx="18" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.25)"/>
+          <rect x="24" y="30" width="150" height="10" rx="5" fill="white" fill-opacity="0.7"/>
+          <rect x="24" y="60" width="220" height="10" rx="5" fill="white" fill-opacity="0.4"/>
+          <rect x="24" y="90" width="210" height="10" rx="5" fill="white" fill-opacity="0.35"/>
+          <!-- risk bars -->
+          <rect x="24" y="140" width="240" height="14" rx="7" fill="rgba(255,255,255,0.25)"/>
+          <rect x="24" y="170" width="180" height="14" rx="7" fill="rgba(255,255,255,0.25)"/>
+          <rect x="24" y="200" width="120" height="14" rx="7" fill="rgba(255,255,255,0.25)"/>
+        </g>
+      </g>
+      <!-- network with anomaly (red accent simulated via higher opacity white node) -->
+      <g transform="translate(160,320)" stroke="white" stroke-opacity="0.6" stroke-width="2" fill="white">
+        <line x1="0" y1="60" x2="120" y2="-10"/>
+        <line x1="120" y1="-10" x2="240" y2="30"/>
+        <line x1="120" y1="-10" x2="200" y2="-40"/>
+        <circle cx="0" cy="60" r="6"/>
+        <circle cx="120" cy="-10" r="10" fill-opacity="1"/>
+        <circle cx="240" cy="30" r="6"/>
+        <circle cx="200" cy="-40" r="6"/>
+      </g>
+      <!-- shield icon -->
+      <g transform="translate(980,60)" fill="none" stroke="white" stroke-width="6" stroke-linejoin="round">
+        <path d="M60 0 L120 24 V96c0 60-54 96-120 120C-66 192-120 156-120 96V24L-60 0Z" opacity="0.25"/>
+        <path d="M0 20 L60 40 V96c0 42-38 68-60 76c-22-8-60-34-60-76V40L0 20Z"/>
+        <path d="M0 52 v44 m-22-22 h44"/>
+      </g>
+    </svg>
+    <div class="p-5"><p class="text-sm text-white/70">Tech: AWS Bedrock • Streamlit • DynamoDB • Lambda</p></div>
+  </div>
+</div>
       </div>
     </div>
   </section>
@@ -355,6 +403,7 @@
   </script>
 </body>
 </html>
+
 
 
 
