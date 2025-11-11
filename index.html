@@ -117,11 +117,47 @@
       <div class="relative">
         <div class="absolute -inset-4 rounded-3xl bg-primary/20 blur-2xl" aria-hidden="true"></div>
         <div class="relative glass rounded-3xl overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1616401784845-71a5a36cb2f7?auto=format&fit=crop&w=1200&q=80" alt="Man and woman collaborating in AI consulting" class="w-full h-96 object-cover" referrerpolicy="no-referrer" crossorigin="anonymous" loading="lazy" onerror="this.onerror=null;this.src='https://picsum.photos/1200/600?random=1';"/>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Replaced external photo with an inline AI-themed SVG so it always matches the brand -->
+  <svg viewBox="0 0 1200 600" class="w-full h-96" role="img" aria-label="Abstract AI and data visualization">
+    <defs>
+      <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#2563EB"/>
+        <stop offset="100%" stop-color="#38BDF8"/>
+      </linearGradient>
+      <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="rgba(255,255,255,0.15)"/>
+        <stop offset="100%" stop-color="rgba(255,255,255,0.0)"/>
+      </linearGradient>
+    </defs>
+    <rect width="1200" height="600" fill="url(#g1)"/>
+    <!-- circuit lines -->
+    <g stroke="white" stroke-opacity="0.25" stroke-width="2">
+      <path d="M80,520 C200,420 400,500 520,380 S820,260 980,320" fill="none"/>
+      <path d="M100,460 C240,360 460,420 600,300 S900,200 1080,260" fill="none"/>
+    </g>
+    <!-- nodes -->
+    <g fill="white" fill-opacity="0.85">
+      <circle cx="220" cy="420" r="6"/>
+      <circle cx="480" cy="360" r="6"/>
+      <circle cx="760" cy="280" r="6"/>
+      <circle cx="980" cy="320" r="6"/>
+    </g>
+    <!-- dashboard card -->
+    <g transform="translate(140,120)">
+      <rect width="420" height="260" rx="18" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.25)"/>
+      <rect x="24" y="48" width="372" height="12" rx="6" fill="white" fill-opacity="0.65"/>
+      <rect x="24" y="78" width="330" height="12" rx="6" fill="white" fill-opacity="0.4"/>
+      <rect x="24" y="108" width="360" height="12" rx="6" fill="white" fill-opacity="0.3"/>
+      <rect x="24" y="150" width="180" height="80" rx="10" fill="url(#g2)"/>
+      <rect x="218" y="150" width="180" height="80" rx="10" fill="url(#g2)"/>
+    </g>
+    <text x="740" y="200" font-family="Inter, system-ui" font-size="60" fill="white" fill-opacity="0.9" font-weight="800">Applied AI</text>
+    <text x="740" y="250" font-family="Inter, system-ui" font-size="22" fill="white" fill-opacity="0.8">Data • Cloud • Analytics</text>
+  </svg>
+</div>
+</div>
+</div>
+</section>
 
   <!-- SERVICES (added) -->
   <section id="services" class="py-16">
@@ -319,6 +355,7 @@
   </script>
 </body>
 </html>
+
 
 
 
