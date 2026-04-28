@@ -4,16 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Fraud Copilot AI by ZekaNor — Real-Time Fraud Detection & Analytics</title>
-  <meta name="description" content="Fraud Copilot AI by ZekaNor is a real-time fraud detection and investigation console built on AWS Bedrock, DynamoDB and Streamlit. ZekaNor.AI designs applied AI, data and cloud solutions with measurable impact." />
+  <title>ZekaNor LLC — AI, Data Analytics & Fraud Intelligence Solutions</title>
+  <meta name="description" content="ZekaNor LLC is an AI, data analytics, and fraud intelligence company based in Bronx, New York. ZekaNor builds applied AI systems, fraud detection tools, analytics dashboards, and cloud-ready decision intelligence solutions." />
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%232563EB'/%3E%3Cpath d='M18 33h28M32 19v28' stroke='white' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E"/>
 
-  <meta property="og:title" content="Fraud Copilot AI by ZekaNor — Real-Time Fraud Detection & Analytics" />
-  <meta property="og:description" content="A multilingual fraud analytics console powered by AWS Bedrock and DynamoDB, built by ZekaNor.AI. From discovery to production with trustworthy AI systems." />
+  <meta property="og:title" content="ZekaNor LLC — AI, Data Analytics & Fraud Intelligence Solutions" />
+  <meta property="og:description" content="Applied AI, fraud intelligence, data analytics, and cloud-ready decision systems for startups, small businesses, and risk-focused teams." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://zekanor.com" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1616401784845-71a5a36cb2f7?q=80&w=1200&auto=format&fit=crop" />
+  <meta property="og:url" content="https://www.zekanor.com" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,514 +27,509 @@
         container: { center: true, padding: '1rem' },
         extend: {
           colors: {
-            primary: { DEFAULT: '#2563EB' }, /* Blue 600 */
-            accent: { DEFAULT: '#38BDF8' },  /* Sky 400 */
+            primary: { DEFAULT: '#2563EB' },
+            accent: { DEFAULT: '#38BDF8' },
             ink: '#E5E7EB',
             surface: '#0A0E1A',
+            card: '#111827'
           },
-          boxShadow: { glow: '0 0 40px rgba(37, 99, 235, 0.45)' },
-          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          boxShadow: {
+            glow: '0 0 40px rgba(37, 99, 235, 0.45)',
+            soft: '0 20px 60px rgba(0,0,0,0.35)'
+          },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] }
         }
       }
     }
   </script>
 
   <style>
-    .stars { 
-      background-image: radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,.35), rgba(255,255,255,0)),
-                        radial-gradient(1px 1px at 100px 80px, rgba(255,255,255,.25), rgba(255,255,255,0)),
-                        radial-gradient(1.5px 1.5px at 200px 120px, rgba(255,255,255,.3), rgba(255,255,255,0));
-      background-size: 300px 300px, 500px 500px, 700px 700px;
-    }
-    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); }
-    .gradient { 
-      background: radial-gradient(1200px 600px at 10% -10%, rgba(37,99,235,.35), rgba(37,99,235,0)),
-                  radial-gradient(900px 500px at 90% 10%, rgba(56,189,248,.25), rgba(56,189,248,0));
-    }
     html { scroll-behavior: smooth; }
+    body { overflow-x: hidden; }
+    .glass { backdrop-filter: blur(14px); background: rgba(255,255,255,0.055); border: 1px solid rgba(255,255,255,0.10); }
+    .gradient {
+      background:
+        radial-gradient(1200px 650px at 10% -10%, rgba(37,99,235,.38), rgba(37,99,235,0)),
+        radial-gradient(900px 550px at 90% 5%, rgba(56,189,248,.25), rgba(56,189,248,0)),
+        linear-gradient(180deg, #0A0E1A 0%, #0B1020 100%);
+    }
+    .grid-pattern {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 44px 44px;
+    }
+    .text-gradient {
+      background: linear-gradient(90deg, #FFFFFF, #38BDF8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
   </style>
 
-  <!-- Structured data for AWS / SEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "ZekaNor.AI",
-    "url": "https://zekanor.com",
-    "logo": "https://zekanor.com/icon.png",
-    "sameAs": ["https://www.linkedin.com"],
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "email": "hello@zekanor.com",
-      "contactType": "sales"
-    }],
-    "hasProduct": [{
-      "@type": "SoftwareApplication",
-      "name": "Fraud Copilot AI",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web",
-      "url": "https://zekanor.com",
-      "description": "Fraud Copilot AI is a real-time fraud detection and investigation console built on AWS Bedrock, DynamoDB, and Streamlit."
-    }]
+    "name": "ZekaNor LLC",
+    "url": "https://www.zekanor.com",
+    "email": "phyllisbarikisu@gmail.com",
+    "telephone": "+1-937-603-1770",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1750 Sedgwick Ave",
+      "addressLocality": "Bronx",
+      "addressRegion": "NY",
+      "postalCode": "10453",
+      "addressCountry": "US"
+    },
+    "description": "ZekaNor LLC provides AI, data analytics, fraud intelligence, and cloud-ready decision support solutions.",
+    "areaServed": "United States",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "ZekaNor Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Solutions Development" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fraud Intelligence & Risk Analytics" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Data Analytics Dashboards" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cloud-Ready Data Systems" } }
+      ]
+    }
   }
   </script>
 </head>
 
 <body class="bg-surface text-ink font-sans selection:bg-primary/30">
 
-  <!-- NAVBAR -->
   <header class="fixed inset-x-0 top-0 z-50">
-    <nav class="container mt-4 px-4 py-3 rounded-2xl glass flex items-center justify-between" aria-label="Global">
-      <a href="#home" class="group flex items-center gap-2">
-        <div class="h-8 w-8 rounded-full bg-primary shadow-glow grid place-items-center" aria-hidden="true">
+    <nav class="container mt-4 px-4 py-3 rounded-2xl glass flex items-center justify-between" aria-label="Global navigation">
+      <a href="#home" class="flex items-center gap-2">
+        <div class="h-9 w-9 rounded-full bg-primary shadow-glow grid place-items-center" aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="h-5 w-5">
             <path d="M12 3v18M3 12h18" stroke="white" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </div>
-        <span class="font-bold tracking-tight text-white">ZekaNor.AI</span>
+        <span class="font-extrabold tracking-tight text-white">ZekaNor LLC</span>
       </a>
+
       <button id="menuBtn" class="md:hidden rounded-lg px-3 py-2 hover:bg-white/5" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
+
       <ul class="hidden md:flex items-center gap-6 text-sm">
-        <li><a class="hover:text-white" href="#home">Fraud Copilot AI</a></li>
-        <li><a class="hover:text-white" href="#services">What I Build</a></li>
-        <li><a class="hover:text-white" href="#industries">Who It Helps</a></li>
-        <li><a class="hover:text-white" href="#work">How It Works</a></li>
+        <li><a class="hover:text-white" href="#services">Services</a></li>
+        <li><a class="hover:text-white" href="#solutions">Solutions</a></li>
+        <li><a class="hover:text-white" href="#process">Process</a></li>
+        <li><a class="hover:text-white" href="#company">Company</a></li>
         <li><a class="hover:text-white" href="#faqs">FAQs</a></li>
         <li>
-          <a class="ml-2 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white shadow-glow hover:opacity-90" href="#contact">
-            Book a Call
+          <a class="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white shadow-glow hover:opacity-90" href="#contact">
+            Contact ZekaNor
           </a>
         </li>
       </ul>
     </nav>
 
-    <!-- Mobile nav -->
     <div id="mobileNav" class="container md:hidden px-4 pt-2 hidden">
       <div class="glass rounded-2xl p-3">
-        <a class="block px-3 py-2 hover:bg-white/5 rounded-lg" href="#home">Fraud Copilot AI</a>
-        <a class="block px-3 py-2 hover:bg-white/5 rounded-lg" href="#services">What I Build</a>
-        <a class="block px-3 py-2 hover:bg-white/5 rounded-lg" href="#industries">Who It Helps</a>
-        <a class="block px-3 py-2 hover:bg-white/5 rounded-lg" href="#work">How It Works</a>
+        <a class="block px-3 py-2 hover:bg-white/5 rounded-lg" href="#services">Services</a>
+        <a class="block px-3 py-2 hover:bg-white/5 rounded-lg" href="#solutions">Solutions</a>
+        <a class="block px-3 py-2 hover:bg-white/5 rounded-lg" href="#process">Process</a>
+        <a class="block px-3 py-2 hover:bg-white/5 rounded-lg" href="#company">Company</a>
         <a class="block px-3 py-2 hover:bg-white/5 rounded-lg" href="#faqs">FAQs</a>
-        <a class="block px-3 py-2 bg-primary/90 text-white rounded-lg mt-2 text-center" href="#contact">Book a Call</a>
+        <a class="block px-3 py-2 bg-primary/90 text-white rounded-lg mt-2 text-center" href="#contact">Contact ZekaNor</a>
       </div>
     </div>
   </header>
 
-  <!-- HERO: focus on Fraud Copilot AI -->
-  <section id="home" class="pt-32 md:pt-40 pb-20 gradient stars">
-    <div class="container grid lg:grid-cols-2 gap-10 items-center">
-      <div>
-        <span class="inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1 text-xs text-white/70">
-          <span class="h-2 w-2 rounded-full bg-accent"></span> Fraud • Risk • Payments • Fintech
-        </span>
-        <h1 class="mt-5 text-4xl md:text-6xl font-black tracking-tight text-white leading-[1.05]">
-          Fraud Copilot AI<br class="hidden md:block" />
-          <span class="text-accent">Real-Time Fraud Detection & Analyst Console</span>
-        </h1>
-        <p class="mt-5 text-white/70 text-lg max-w-xl">
-          Built by ZekaNor.AI, Fraud Copilot AI turns raw transactions into risk scores,
-          explanations, and investigation workflows — powered by AWS Bedrock, DynamoDB, and Streamlit.
-        </p>
-        <div class="mt-7 flex flex-col sm:flex-row gap-4">
-          <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3 font-semibold text-white shadow-glow hover:opacity-90">
-            Talk about piloting Fraud Copilot AI
-          </a>
-          <a href="#work" class="inline-flex items-center justify-center rounded-xl border border-white/15 px-6 py-3 font-semibold text-white/90 hover:bg-white/5">
-            See how the console works
-          </a>
-        </div>
-        <p class="mt-4 text-xs text-white/50">
-          Flagship project: Fraud Copilot AI — multilingual fraud analytics, analyst-friendly explanations, and voice summaries using AWS Polly.
-        </p>
-      </div>
-
-      <div class="relative">
-        <div class="absolute -inset-4 rounded-3xl bg-primary/20 blur-2xl" aria-hidden="true"></div>
-        <div class="relative glass rounded-3xl overflow-hidden">
-          <!-- AI / fraud dashboard SVG -->
-          <svg viewBox="0 0 1200 600" class="w-full h-96" role="img" aria-label="Fraud analytics and AI dashboard">
-            <defs>
-              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#2563EB"/>
-                <stop offset="100%" stop-color="#38BDF8"/>
-              </linearGradient>
-              <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="rgba(255,255,255,0.18)"/>
-                <stop offset="100%" stop-color="rgba(255,255,255,0.0)"/>
-              </linearGradient>
-            </defs>
-            <rect width="1200" height="600" fill="url(#g1)"/>
-            <!-- circuit lines -->
-            <g stroke="white" stroke-opacity="0.25" stroke-width="2">
-              <path d="M80,520 C200,420 400,500 520,380 S820,260 980,320" fill="none"/>
-              <path d="M100,460 C240,360 460,420 600,300 S900,200 1080,260" fill="none"/>
-            </g>
-            <!-- nodes -->
-            <g fill="white" fill-opacity="0.85">
-              <circle cx="220" cy="420" r="6"/>
-              <circle cx="480" cy="360" r="6"/>
-              <circle cx="760" cy="280" r="6"/>
-              <circle cx="980" cy="320" r="6"/>
-            </g>
-            <!-- dashboard card -->
-            <g transform="translate(140,120)">
-              <rect width="420" height="260" rx="18" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.25)"/>
-              <rect x="24" y="48" width="372" height="12" rx="6" fill="white" fill-opacity="0.65"/>
-              <rect x="24" y="78" width="330" height="12" rx="6" fill="white" fill-opacity="0.4"/>
-              <rect x="24" y="108" width="360" height="12" rx="6" fill="white" fill-opacity="0.3"/>
-              <rect x="24" y="150" width="180" height="80" rx="10" fill="url(#g2)"/>
-              <rect x="218" y="150" width="180" height="80" rx="10" fill="url(#g2)"/>
-            </g>
-            <text x="740" y="200" font-family="Inter, system-ui" font-size="52" fill="white" fill-opacity="0.95" font-weight="800">
-              Fraud Copilot AI
-            </text>
-            <text x="740" y="250" font-family="Inter, system-ui" font-size="22" fill="white" fill-opacity="0.8">
-              Real-time fraud analytics • AWS Bedrock
-            </text>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES (reframed toward fraud / risk + projects) -->
-  <section id="services" class="py-16">
-    <div class="container">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-white">What I Build Around Fraud Copilot AI</h2>
-      <p class="mt-3 text-white/70 max-w-3xl">
-        Fraud Copilot AI is the flagship, but I also build the data plumbing, analytics, and supporting tools
-        that make a fraud platform actually work in production.
-      </p>
-      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="glass rounded-2xl p-6">
-          <h3 class="text-white font-bold text-lg">Fraud & Risk Analytics</h3>
-          <p class="mt-2 text-white/70 text-sm">
-            Transaction scoring, anomaly detection, case routing, and dashboards designed for fraud and risk teams.
-          </p>
-          <ul class="mt-3 text-white/70 text-sm list-disc list-inside space-y-1">
-            <li>Risk scores + explanations</li>
-            <li>Analyst investigation views</li>
-            <li>Rule + model hybrid approaches</li>
-          </ul>
-        </div>
-
-        <div class="glass rounded-2xl p-6">
-          <h3 class="text-white font-bold text-lg">Data Engineering for Fraud</h3>
-          <p class="mt-2 text-white/70 text-sm">
-            Clean, reliable event streams and history tables so Fraud Copilot AI has the data it needs.
-          </p>
-          <ul class="mt-3 text-white/70 text-sm list-disc list-inside space-y-1">
-            <li>Streaming / batch pipelines</li>
-            <li>DynamoDB, S3, warehouses</li>
-            <li>Feature engineering for risk</li>
-          </ul>
-        </div>
-
-        <div class="glass rounded-2xl p-6">
-          <h3 class="text-white font-bold text-lg">Analyst & Operations Tools</h3>
-          <p class="mt-2 text-white/70 text-sm">
-            Consoles and reports that fraud, operations, and finance teams can actually use every day.
-          </p>
-          <ul class="mt-3 text-white/70 text-sm list-disc list-inside space-y-1">
-            <li>Investigation consoles</li>
-            <li>Case notes & audit trails</li>
-            <li>Performance & KPI dashboards</li>
-          </ul>
-        </div>
-
-        <div class="glass rounded-2xl p-6">
-          <h3 class="text-white font-bold text-lg">Cloud & MLOps on AWS</h3>
-          <p class="mt-2 text-white/70 text-sm">
-            Secure deployments of Fraud Copilot-style systems, with monitoring and CI/CD.
-          </p>
-          <ul class="mt-3 text-white/70 text-sm list-disc list-inside space-y-1">
-            <li>AWS Bedrock, Lambda, DynamoDB</li>
-            <li>Infra as code (CDK/Terraform)</li>
-            <li>Model / rule monitoring & drift</li>
-          </ul>
-        </div>
-
-        <div class="glass rounded-2xl p-6">
-          <h3 class="text-white font-bold text-lg">Prototype & Pilot Sprints</h3>
-          <p class="mt-2 text-white/70 text-sm">
-            2-week to 4-week pilots of Fraud Copilot AI with your data, so you can prove value quickly.
-          </p>
-          <ul class="mt-3 text-white/70 text-sm list-disc list-inside space-y-1">
-            <li>Proof-of-concept console</li>
-            <li>Evaluation with your team</li>
-            <li>Roll-out plan if it works</li>
-          </ul>
-        </div>
-
-        <div class="glass rounded-2xl p-6">
-          <h3 class="text-white font-bold text-lg">Advisory & Fractional Role</h3>
-          <p class="mt-2 text-white/70 text-sm">
-            Helping founders, fraud leaders, and data teams shape their fraud roadmap around tools like Fraud Copilot AI.
-          </p>
-          <ul class="mt-3 text-white/70 text-sm list-disc list-inside space-y-1">
-            <li>Roadmaps & prioritization</li>
-            <li>Vendor / stack decisions</li>
-            <li>Analytics & reporting coaching</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- INDUSTRIES (keep but tilt to fraud-heavy domains) -->
-  <section id="industries" class="py-16">
-    <div class="container">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-white">Who Fraud Copilot AI Is For</h2>
-      <p class="mt-3 text-white/70 max-w-3xl">
-        The patterns and controls behind Fraud Copilot AI transfer well to these domains.
-      </p>
-      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="glass rounded-2xl p-6">
-          <h3 class="text-white font-semibold">FinTech & Payments</h3>
-          <p class="mt-2 text-white/70 text-sm">Card fraud, KYC, AML, chargebacks, and risk orchestration.</p>
-        </div>
-        <div class="glass rounded-2xl p-6">
-          <h3 class="text-white font-semibold">Digital Banking & Lending</h3>
-          <p class="mt-2 text-white/70 text-sm">Identity fraud, credit abuse, and application risk.</p>
-        </div>
-        <div class="glass rounded-2xl p-6">
-          <h3 class="text-white font-semibold">Retail & e-Commerce</h3>
-          <p class="mt-2 text-white/70 text-sm">Account takeover, promo abuse, refund scams, and bots.</p>
-        </div>
-        <div class="glass rounded-2xl p-6">
-          <h3 class="text-white font-semibold">Marketplaces</h3>
-          <p class="mt-2 text-white/70 text-sm">Buyer/seller fraud, fake inventory, collusion patterns.</p>
-        </div>
-        <div class="glass rounded-2xl p-6">
-          <h3 class="text-white font-semibold">Insurance & Claims</h3>
-          <p class="mt-2 text-white/70 text-sm">Suspicious claims, network patterns, anomaly scoring.</p>
-        </div>
-        <div class="glass rounded-2xl p-6">
-          <h3 class="text-white font-semibold">SMB & Startups</h3>
-          <p class="mt-2 text-white/70 text-sm">Early-stage fraud defenses without building a full team yet.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESS (same structure) -->
-  <section id="process" class="py-16">
-    <div class="container">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-white">From Idea to Fraud Console</h2>
-      <div class="mt-8 grid md:grid-cols-4 gap-6">
-        <div class="glass rounded-2xl p-6">
-          <p class="text-xs text-white/60">Step 1</p>
-          <h3 class="text-white font-semibold">Discover</h3>
-          <p class="mt-2 text-white/70 text-sm">Clarify fraud problems, data sources, and success metrics.</p>
-        </div>
-        <div class="glass rounded-2xl p-6">
-          <p class="text-xs text-white/60">Step 2</p>
-          <h3 class="text-white font-semibold">Design</h3>
-          <p class="mt-2 text-white/70 text-sm">Shape the Fraud Copilot AI-style console around your workflows.</p>
-        </div>
-        <div class="glass rounded-2xl p-6">
-          <p class="text-xs text-white/60">Step 3</p>
-          <h3 class="text-white font-semibold">Build</h3>
-          <p class="mt-2 text-white/70 text-sm">Implement models, rules, dashboards, and explanations on AWS.</p>
-        </div>
-        <div class="glass rounded-2xl p-6">
-          <p class="text-xs text-white/60">Step 4</p>
-          <h3 class="text-white font-semibold">Operate</h3>
-          <p class="mt-2 text-white/70 text-sm">Roll out, monitor, and iterate based on analyst feedback.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CASE STUDY (Fraud Copilot AI) -->
-  <section id="work" class="py-16">
-    <div class="container">
-      <div class="grid md:grid-cols-2 gap-8 items-center">
+  <main>
+    <section id="home" class="pt-32 md:pt-40 pb-20 gradient grid-pattern">
+      <div class="container grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 class="text-3xl md:text-4xl font-extrabold text-white">
-            Featured Project — Fraud Copilot AI
-          </h2>
-          <p class="mt-3 text-white/70">
-            A real-time fraud detection and investigation console built with AWS Bedrock, DynamoDB, and Streamlit.
-            In tests, it reduced manual review time by <span class="font-semibold text-white">around 38%</span> for sample workloads.
+          <span class="inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1 text-xs text-white/75">
+            <span class="h-2 w-2 rounded-full bg-accent"></span> AI • Data Analytics • Fraud Intelligence • Cloud Systems
+          </span>
+
+          <h1 class="mt-6 text-4xl md:text-6xl font-black tracking-tight text-white leading-[1.05]">
+            AI and Data Systems Built for
+            <span class="text-gradient"> Real Business Decisions</span>
+          </h1>
+
+          <p class="mt-6 text-white/72 text-lg max-w-2xl leading-relaxed">
+            ZekaNor LLC develops applied AI, fraud intelligence, data analytics, and cloud-ready decision support tools for startups, small businesses, and risk-focused teams.
           </p>
-          <ul class="mt-5 text-white/70 list-disc list-inside space-y-2">
-            <li>Multilingual reasoning engine for global teams</li>
-            <li>Analyst-friendly explanations and case summaries</li>
-            <li>Polly voice summaries for quick stand-ups and reviews</li>
-          </ul>
-          <div class="mt-6 flex gap-3">
-            <a href="#contact" class="rounded-xl bg-primary px-5 py-3 font-semibold text-white shadow-glow hover:opacity-90">
-              Discuss a Fraud Copilot-style build
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3 font-semibold text-white shadow-glow hover:opacity-90">
+              Start a Conversation
             </a>
-            <a href="#faqs" class="rounded-xl border border-white/15 px-5 py-3 font-semibold text-white/90 hover:bg-white/5">
-              See common questions
+            <a href="#solutions" class="inline-flex items-center justify-center rounded-xl border border-white/15 px-6 py-3 font-semibold text-white/90 hover:bg-white/5">
+              Explore Solutions
             </a>
+          </div>
+
+          <div class="mt-8 grid grid-cols-3 gap-3 max-w-xl">
+            <div class="glass rounded-2xl p-4">
+              <p class="text-2xl font-extrabold text-white">AI</p>
+              <p class="text-xs text-white/60 mt-1">Applied systems</p>
+            </div>
+            <div class="glass rounded-2xl p-4">
+              <p class="text-2xl font-extrabold text-white">Data</p>
+              <p class="text-xs text-white/60 mt-1">Decision analytics</p>
+            </div>
+            <div class="glass rounded-2xl p-4">
+              <p class="text-2xl font-extrabold text-white">Risk</p>
+              <p class="text-xs text-white/60 mt-1">Fraud intelligence</p>
+            </div>
           </div>
         </div>
 
         <div class="relative">
-          <div class="absolute -inset-4 bg-accent/20 blur-2xl rounded-3xl" aria-hidden="true"></div>
-          <div class="relative glass rounded-3xl overflow-hidden">
-            <!-- Console / shield SVG -->
-            <svg viewBox="0 0 1200 480" class="w-full h-72" role="img" aria-label="Fraud analytics dashboard with anomaly network and shield">
-              <defs>
-                <linearGradient id="cs1" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#38BDF8"/>
-                  <stop offset="100%" stop-color="#2563EB"/>
-                </linearGradient>
-              </defs>
-              <rect width="1200" height="480" fill="url(#cs1)"/>
-              <g transform="translate(40,40)">
-                <rect width="720" height="360" rx="18" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.25)"/>
-                <rect x="24" y="24" width="280" height="12" rx="6" fill="white" fill-opacity="0.7"/>
-                <rect x="24" y="48" width="200" height="10" rx="5" fill="white" fill-opacity="0.45"/>
-                <polyline points="24,300 120,260 210,280 300,220 390,240 480,190 570,210 660,180 708,195" fill="none" stroke="white" stroke-width="3" stroke-opacity="0.9"/>
-                <g fill="white" fill-opacity="0.9">
-                  <circle cx="120" cy="260" r="5"/>
-                  <circle cx="300" cy="220" r="5"/>
-                  <circle cx="480" cy="190" r="5"/>
-                  <circle cx="660" cy="180" r="5"/>
-                </g>
-                <g transform="translate(760,0)">
-                  <rect width="300" height="360" rx="18" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.25)"/>
-                  <rect x="24" y="30" width="150" height="10" rx="5" fill="white" fill-opacity="0.7"/>
-                  <rect x="24" y="60" width="220" height="10" rx="5" fill="white" fill-opacity="0.4"/>
-                  <rect x="24" y="90" width="210" height="10" rx="5" fill="white" fill-opacity="0.35"/>
-                  <rect x="24" y="140" width="240" height="14" rx="7" fill="rgba(255,255,255,0.25)"/>
-                  <rect x="24" y="170" width="180" height="14" rx="7" fill="rgba(255,255,255,0.25)"/>
-                  <rect x="24" y="200" width="120" height="14" rx="7" fill="rgba(255,255,255,0.25)"/>
-                </g>
-              </g>
-              <g transform="translate(160,320)" stroke="white" stroke-opacity="0.6" stroke-width="2" fill="white">
-                <line x1="0" y1="60" x2="120" y2="-10"/>
-                <line x1="120" y1="-10" x2="240" y2="30"/>
-                <line x1="120" y1="-10" x2="200" y2="-40"/>
-                <circle cx="0" cy="60" r="6"/>
-                <circle cx="120" cy="-10" r="10" fill-opacity="1"/>
-                <circle cx="240" cy="30" r="6"/>
-                <circle cx="200" cy="-40" r="6"/>
-              </g>
-              <g transform="translate(980,60)" fill="none" stroke="white" stroke-width="6" stroke-linejoin="round">
-                <path d="M60 0 L120 24 V96c0 60-54 96-120 120C-66 192-120 156-120 96V24L-60 0Z" opacity="0.25"/>
-                <path d="M0 20 L60 40 V96c0 42-38 68-60 76c-22-8-60-34-60-76V40L0 20Z"/>
-                <path d="M0 52 v44 m-22-22 h44"/>
-              </g>
-            </svg>
-            <div class="p-5">
-              <p class="text-sm text-white/70">
-                Tech stack: AWS Bedrock • Streamlit • DynamoDB • Lambda
+          <div class="absolute -inset-5 rounded-3xl bg-primary/20 blur-2xl" aria-hidden="true"></div>
+          <div class="relative glass rounded-3xl overflow-hidden shadow-soft">
+            <div class="p-6 border-b border-white/10 flex items-center justify-between">
+              <div>
+                <p class="text-white font-bold">ZekaNor Intelligence Console</p>
+                <p class="text-white/55 text-sm">Risk scoring • Analytics • AI recommendations</p>
+              </div>
+              <span class="rounded-full bg-emerald-400/15 text-emerald-300 border border-emerald-300/20 px-3 py-1 text-xs">Live System View</span>
+            </div>
+            <div class="p-6 space-y-4">
+              <div class="grid grid-cols-3 gap-4">
+                <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
+                  <p class="text-white/50 text-xs">Risk Score</p>
+                  <p class="text-white text-3xl font-black mt-2">82</p>
+                  <p class="text-rose-300 text-xs mt-1">High attention</p>
+                </div>
+                <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
+                  <p class="text-white/50 text-xs">Model Signal</p>
+                  <p class="text-white text-3xl font-black mt-2">7.4x</p>
+                  <p class="text-accent text-xs mt-1">Pattern anomaly</p>
+                </div>
+                <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
+                  <p class="text-white/50 text-xs">Review Time</p>
+                  <p class="text-white text-3xl font-black mt-2">38%</p>
+                  <p class="text-emerald-300 text-xs mt-1">Potential reduction</p>
+                </div>
+              </div>
+
+              <div class="rounded-2xl bg-white/5 border border-white/10 p-5">
+                <p class="text-white font-semibold">AI Analyst Summary</p>
+                <p class="text-white/65 text-sm mt-2 leading-relaxed">
+                  Transaction activity shows elevated risk due to unusual timing, device mismatch, and deviation from normal purchase behavior. Recommended action: route for manual review and request verification.
+                </p>
+              </div>
+
+              <div class="rounded-2xl bg-white/5 border border-white/10 p-5">
+                <div class="flex items-center justify-between text-sm">
+                  <span class="text-white/70">Data readiness</span>
+                  <span class="text-white">92%</span>
+                </div>
+                <div class="mt-3 h-2 rounded-full bg-white/10 overflow-hidden">
+                  <div class="h-full w-[92%] rounded-full bg-accent"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="py-20">
+      <div class="container">
+        <div class="max-w-3xl">
+          <p class="text-accent text-sm font-semibold uppercase tracking-wider">Services</p>
+          <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-white">What ZekaNor Builds</h2>
+          <p class="mt-4 text-white/70 leading-relaxed">
+            ZekaNor LLC builds practical AI and data systems that help organizations understand risk, automate analysis, improve reporting, and make better operating decisions.
+          </p>
+        </div>
+
+        <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="glass rounded-2xl p-6 hover:bg-white/[0.075] transition">
+            <h3 class="text-white font-bold text-lg">AI Solutions Development</h3>
+            <p class="mt-3 text-white/70 text-sm leading-relaxed">
+              Custom AI tools, copilots, and workflow assistants designed around real business processes.
+            </p>
+          </article>
+
+          <article class="glass rounded-2xl p-6 hover:bg-white/[0.075] transition">
+            <h3 class="text-white font-bold text-lg">Fraud Intelligence & Risk Analytics</h3>
+            <p class="mt-3 text-white/70 text-sm leading-relaxed">
+              Risk scoring, anomaly detection, investigation dashboards, case summaries, and explainable fraud signals.
+            </p>
+          </article>
+
+          <article class="glass rounded-2xl p-6 hover:bg-white/[0.075] transition">
+            <h3 class="text-white font-bold text-lg">Data Analytics Dashboards</h3>
+            <p class="mt-3 text-white/70 text-sm leading-relaxed">
+              Executive dashboards, operational reporting, KPI tracking, and decision-ready analytics for growing teams.
+            </p>
+          </article>
+
+          <article class="glass rounded-2xl p-6 hover:bg-white/[0.075] transition">
+            <h3 class="text-white font-bold text-lg">Cloud-Ready Data Systems</h3>
+            <p class="mt-3 text-white/70 text-sm leading-relaxed">
+              Data pipelines, storage patterns, cloud architecture, and secure deployments built for scale and reliability.
+            </p>
+          </article>
+
+          <article class="glass rounded-2xl p-6 hover:bg-white/[0.075] transition">
+            <h3 class="text-white font-bold text-lg">Prototype & Pilot Builds</h3>
+            <p class="mt-3 text-white/70 text-sm leading-relaxed">
+              Fast proof-of-concept builds that help validate business value before large technical investments.
+            </p>
+          </article>
+
+          <article class="glass rounded-2xl p-6 hover:bg-white/[0.075] transition">
+            <h3 class="text-white font-bold text-lg">AI Strategy & Technical Advisory</h3>
+            <p class="mt-3 text-white/70 text-sm leading-relaxed">
+              Guidance on AI use cases, data readiness, automation opportunities, product direction, and technical planning.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions" class="py-20 bg-white/[0.025] border-y border-white/5">
+      <div class="container">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <p class="text-accent text-sm font-semibold uppercase tracking-wider">Flagship Solution</p>
+            <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-white">Fraud Copilot AI</h2>
+            <p class="mt-4 text-white/70 leading-relaxed">
+              Fraud Copilot AI is ZekaNor’s flagship fraud intelligence concept. It is designed to help teams review suspicious activity faster by combining transaction risk signals, analyst explanations, and AI-assisted investigation summaries.
+            </p>
+            <ul class="mt-6 space-y-3 text-white/70 text-sm">
+              <li>• Transaction scoring and anomaly review</li>
+              <li>• Analyst-friendly fraud explanations</li>
+              <li>• Case summaries for faster decision-making</li>
+              <li>• Cloud-ready architecture using modern data tools</li>
+            </ul>
+          </div>
+
+          <div class="glass rounded-3xl p-6 shadow-soft">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="rounded-2xl bg-white/5 border border-white/10 p-5">
+                <p class="text-white/50 text-sm">Use Case</p>
+                <p class="text-white font-bold mt-2">Fraud Review</p>
+              </div>
+              <div class="rounded-2xl bg-white/5 border border-white/10 p-5">
+                <p class="text-white/50 text-sm">Audience</p>
+                <p class="text-white font-bold mt-2">Risk Teams</p>
+              </div>
+              <div class="rounded-2xl bg-white/5 border border-white/10 p-5">
+                <p class="text-white/50 text-sm">Output</p>
+                <p class="text-white font-bold mt-2">Risk Signals</p>
+              </div>
+              <div class="rounded-2xl bg-white/5 border border-white/10 p-5">
+                <p class="text-white/50 text-sm">Goal</p>
+                <p class="text-white font-bold mt-2">Faster Decisions</p>
+              </div>
+            </div>
+            <div class="mt-5 rounded-2xl bg-primary/10 border border-primary/20 p-5">
+              <p class="text-white font-semibold">Business Value</p>
+              <p class="mt-2 text-white/70 text-sm leading-relaxed">
+                The system is designed to reduce manual review time, improve visibility into fraud patterns, and help teams document why a transaction or account was flagged.
               </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FAQS -->
-  <section id="faqs" class="py-16">
-    <div class="container">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-white">FAQs</h2>
-      <div class="mt-6 grid md:grid-cols-2 gap-6">
-        <details class="glass rounded-2xl p-5" open>
-          <summary class="cursor-pointer text-white font-semibold">How fast can we start a pilot?</summary>
-          <p class="mt-2 text-white/70 text-sm">
-            We can usually kick off within 3–5 business days after scope sign-off.
-            Initial Fraud Copilot-style pilots run 2–4 weeks depending on data access.
+    <section id="process" class="py-20">
+      <div class="container">
+        <div class="max-w-3xl">
+          <p class="text-accent text-sm font-semibold uppercase tracking-wider">Process</p>
+          <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-white">How ZekaNor Works With Clients</h2>
+          <p class="mt-4 text-white/70 leading-relaxed">
+            Every engagement is structured to move from business problem to working technical solution with clear scope, measurable outcomes, and practical delivery steps.
           </p>
-        </details>
-        <details class="glass rounded-2xl p-5">
-          <summary class="cursor-pointer text-white font-semibold">What about security & compliance?</summary>
-          <p class="mt-2 text-white/70 text-sm">
-            We design with least-privilege access, encryption in transit/at rest, and SOC2-friendly patterns.
-            PHI/PII projects are isolated with strict access controls and logging.
-          </p>
-        </details>
-        <details class="glass rounded-2xl p-5">
-          <summary class="cursor-pointer text-white font-semibold">Do you offer ongoing support?</summary>
-          <p class="mt-2 text-white/70 text-sm">
-            Yes — retained support and fractional data / fraud analytics options with clear SLAs and monthly reporting.
-          </p>
-        </details>
-        <details class="glass rounded-2xl p-5">
-          <summary class="cursor-pointer text-white font-semibold">Can you adapt Fraud Copilot AI to our stack?</summary>
-          <p class="mt-2 text-white/70 text-sm">
-            We’re cloud-agnostic with deep AWS experience. Fraud Copilot-style designs can be adapted
-            to your data warehouse, event systems, and BI tools.
-          </p>
-        </details>
-      </div>
-    </div>
-  </section>
+        </div>
 
-  <!-- CONTACT -->
-  <section id="contact" class="py-20">
-    <div class="container grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-white">Let’s Talk About Fraud Copilot AI for Your Team</h2>
-        <p class="mt-3 text-white/70">
-          Share a bit about your fraud / risk challenges and data. I’ll reply within 24 hours with honest next steps — including if we’re not the right fit.
-        </p>
-        <ul class="mt-6 space-y-2 text-white/70">
-          <li>• <a class="underline hover:text-white" href="mailto:hello@zekanor.com">hello@zekanor.com</a></li>
-          <li>• Based in New York • Remote-first</li>
-          <li>• Calendly link available on request</li>
-        </ul>
+        <div class="mt-10 grid md:grid-cols-4 gap-6">
+          <div class="glass rounded-2xl p-6">
+            <p class="text-accent text-sm font-bold">01</p>
+            <h3 class="mt-3 text-white font-bold">Discover</h3>
+            <p class="mt-2 text-white/65 text-sm">Clarify the business problem, data sources, risks, and success metrics.</p>
+          </div>
+          <div class="glass rounded-2xl p-6">
+            <p class="text-accent text-sm font-bold">02</p>
+            <h3 class="mt-3 text-white font-bold">Design</h3>
+            <p class="mt-2 text-white/65 text-sm">Map workflows, analytics logic, system architecture, and user experience.</p>
+          </div>
+          <div class="glass rounded-2xl p-6">
+            <p class="text-accent text-sm font-bold">03</p>
+            <h3 class="mt-3 text-white font-bold">Build</h3>
+            <p class="mt-2 text-white/65 text-sm">Develop models, dashboards, automations, data pipelines, and AI components.</p>
+          </div>
+          <div class="glass rounded-2xl p-6">
+            <p class="text-accent text-sm font-bold">04</p>
+            <h3 class="mt-3 text-white font-bold">Improve</h3>
+            <p class="mt-2 text-white/65 text-sm">Review performance, collect feedback, refine workflows, and plan next steps.</p>
+          </div>
+        </div>
       </div>
-      <form class="glass rounded-2xl p-6 space-y-4" action="https://formspree.io/f/your-id" method="POST">
+    </section>
+
+    <section id="company" class="py-20 bg-white/[0.025] border-y border-white/5">
+      <div class="container grid lg:grid-cols-2 gap-10 items-start">
         <div>
-          <label class="text-sm text-white/70" for="name">Name</label>
-          <input id="name" name="name" required class="mt-1 w-full rounded-lg bg-white/5 px-4 py-3 text-white placeholder-white/40 border border-white/10 focus:ring-2 focus:ring-primary" placeholder="Your full name" />
+          <p class="text-accent text-sm font-semibold uppercase tracking-wider">Company</p>
+          <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-white">About ZekaNor LLC</h2>
+          <p class="mt-4 text-white/70 leading-relaxed">
+            ZekaNor LLC is a technology company focused on applied artificial intelligence, data analytics, fraud intelligence, and software-enabled decision systems. The company supports organizations that need practical technical solutions, clearer reporting, and smarter automation.
+          </p>
+          <p class="mt-4 text-white/70 leading-relaxed">
+            ZekaNor combines data science, AI engineering, business analytics, and cloud-based delivery to create tools that are useful, explainable, and aligned with real operational needs.
+          </p>
         </div>
+
+        <div class="glass rounded-3xl p-6 shadow-soft">
+          <h3 class="text-white font-bold text-xl">Company Information</h3>
+          <div class="mt-5 space-y-4 text-sm">
+            <div class="flex gap-3 border-b border-white/10 pb-4">
+              <span class="text-white/45 w-28 shrink-0">Legal Name</span>
+              <span class="text-white">ZekaNor LLC</span>
+            </div>
+            <div class="flex gap-3 border-b border-white/10 pb-4">
+              <span class="text-white/45 w-28 shrink-0">Location</span>
+              <span class="text-white">1750 Sedgwick Ave, Bronx, NY 10453</span>
+            </div>
+            <div class="flex gap-3 border-b border-white/10 pb-4">
+              <span class="text-white/45 w-28 shrink-0">Phone</span>
+              <a class="text-white underline hover:text-accent" href="tel:+19376031770">+1 (937) 603-1770</a>
+            </div>
+            <div class="flex gap-3 border-b border-white/10 pb-4">
+              <span class="text-white/45 w-28 shrink-0">Email</span>
+              <a class="text-white underline hover:text-accent" href="mailto:phyllisbarikisu@gmail.com">phyllisbarikisu@gmail.com</a>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-white/45 w-28 shrink-0">Focus</span>
+              <span class="text-white">AI solutions, data analytics, fraud intelligence, and software development</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faqs" class="py-20">
+      <div class="container">
+        <div class="max-w-3xl">
+          <p class="text-accent text-sm font-semibold uppercase tracking-wider">FAQs</p>
+          <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-white">Common Questions</h2>
+        </div>
+
+        <div class="mt-8 grid md:grid-cols-2 gap-6">
+          <details class="glass rounded-2xl p-5" open>
+            <summary class="cursor-pointer text-white font-semibold">What does ZekaNor LLC do?</summary>
+            <p class="mt-3 text-white/70 text-sm leading-relaxed">
+              ZekaNor LLC builds AI, data analytics, fraud intelligence, and cloud-ready decision support tools for organizations that need practical technology solutions.
+            </p>
+          </details>
+
+          <details class="glass rounded-2xl p-5">
+            <summary class="cursor-pointer text-white font-semibold">Does ZekaNor work with small businesses and startups?</summary>
+            <p class="mt-3 text-white/70 text-sm leading-relaxed">
+              Yes. ZekaNor supports startups, small businesses, and growing teams that need dashboards, AI tools, automation, data workflows, and risk intelligence solutions.
+            </p>
+          </details>
+
+          <details class="glass rounded-2xl p-5">
+            <summary class="cursor-pointer text-white font-semibold">Can ZekaNor build a prototype or MVP?</summary>
+            <p class="mt-3 text-white/70 text-sm leading-relaxed">
+              Yes. ZekaNor can support prototype builds, pilot systems, dashboards, and early-stage AI/data products that help validate a business idea before larger investment.
+            </p>
+          </details>
+
+          <details class="glass rounded-2xl p-5">
+            <summary class="cursor-pointer text-white font-semibold">Is Fraud Copilot AI available for pilots?</summary>
+            <p class="mt-3 text-white/70 text-sm leading-relaxed">
+              Fraud Copilot AI is ZekaNor’s flagship fraud intelligence concept and can be discussed for pilot-style engagements depending on data access, use case, and scope.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-20">
+      <div class="container grid md:grid-cols-2 gap-10 items-start">
         <div>
-          <label class="text-sm text-white/70" for="email">Email</label>
-          <input id="email" name="email" required type="email" class="mt-1 w-full rounded-lg bg-white/5 px-4 py-3 text-white placeholder-white/40 border border-white/10 focus:ring-2 focus:ring-primary" placeholder="you@company.com" />
+          <p class="text-accent text-sm font-semibold uppercase tracking-wider">Contact</p>
+          <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-white">Contact ZekaNor LLC</h2>
+          <p class="mt-4 text-white/70 leading-relaxed">
+            Reach out to discuss AI solutions, fraud intelligence, analytics dashboards, automation, data systems, or technical advisory support.
+          </p>
+
+          <ul class="mt-8 space-y-3 text-white/75 text-sm">
+            <li>• Email: <a class="underline hover:text-white" href="mailto:phyllisbarikisu@gmail.com">phyllisbarikisu@gmail.com</a></li>
+            <li>• Phone: <a class="underline hover:text-white" href="tel:+19376031770">+1 (937) 603-1770</a></li>
+            <li>• Office: 1750 Sedgwick Ave, Bronx, NY 10453</li>
+            <li>• Business: ZekaNor LLC — AI, Data Analytics & Fraud Intelligence Solutions</li>
+          </ul>
+
+          <p class="mt-5 text-xs text-white/45">
+            Company email setup is in progress. The listed email is currently used for business inquiries.
+          </p>
         </div>
-        <div>
-          <label class="text-sm text-white/70" for="message">Message</label>
-          <textarea id="message" name="message" rows="4" required class="mt-1 w-full rounded-lg bg-white/5 px-4 py-3 text-white placeholder-white/40 border border-white/10 focus:ring-2 focus:ring-primary" placeholder="Tell me about your fraud/risk use case, data sources, and timeline..."></textarea>
-        </div>
-        <input type="hidden" name="_subject" value="New inquiry from ZekaNor / Fraud Copilot AI website" />
-        <button class="w-full rounded-xl bg-primary px-5 py-3 font-semibold text-white shadow-glow hover:opacity-90">Send</button>
-        <p class="text-xs text-white/50">By submitting, you agree to our privacy policy. No spam—ever.</p>
-      </form>
-    </div>
-  </section>
+
+        <form class="glass rounded-3xl p-6 space-y-4 shadow-soft" action="https://formspree.io/f/your-id" method="POST">
+          <div>
+            <label class="text-sm text-white/70" for="name">Name</label>
+            <input id="name" name="name" required class="mt-1 w-full rounded-lg bg-white/5 px-4 py-3 text-white placeholder-white/40 border border-white/10 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your full name" />
+          </div>
+
+          <div>
+            <label class="text-sm text-white/70" for="email">Email</label>
+            <input id="email" name="email" required type="email" class="mt-1 w-full rounded-lg bg-white/5 px-4 py-3 text-white placeholder-white/40 border border-white/10 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="you@company.com" />
+          </div>
+
+          <div>
+            <label class="text-sm text-white/70" for="company">Company</label>
+            <input id="company" name="company" class="mt-1 w-full rounded-lg bg-white/5 px-4 py-3 text-white placeholder-white/40 border border-white/10 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your company or organization" />
+          </div>
+
+          <div>
+            <label class="text-sm text-white/70" for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required class="mt-1 w-full rounded-lg bg-white/5 px-4 py-3 text-white placeholder-white/40 border border-white/10 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Tell us what you need help with: AI, data analytics, fraud intelligence, dashboards, automation, or cloud systems."></textarea>
+          </div>
+
+          <input type="hidden" name="_subject" value="New inquiry from ZekaNor LLC website" />
+          <button class="w-full rounded-xl bg-primary px-5 py-3 font-semibold text-white shadow-glow hover:opacity-90">Send Message</button>
+          <p class="text-xs text-white/50">By submitting this form, you agree to be contacted about your inquiry. No spam.</p>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <footer class="py-10 border-t border-white/5 text-center text-white/60 text-sm">
-    <p>
-      © <span id="y"></span> ZekaNor.AI — All rights reserved.
-      • <a href="#" class="underline hover:text-white">Privacy</a>
-    </p>
+    <p>© <span id="y"></span> ZekaNor LLC. All rights reserved.</p>
+    <p class="mt-2">1750 Sedgwick Ave, Bronx, NY 10453 • +1 (937) 603-1770</p>
   </footer>
 
   <script>
-    // year
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // mobile menu
     const btn = document.getElementById('menuBtn');
     const nav = document.getElementById('mobileNav');
+
     if (btn && nav) {
       btn.addEventListener('click', () => {
         const open = nav.classList.contains('hidden');
         nav.classList.toggle('hidden');
         btn.setAttribute('aria-expanded', String(open));
       });
+
+      nav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          nav.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
     }
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
